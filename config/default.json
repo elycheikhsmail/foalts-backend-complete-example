@@ -1,0 +1,27 @@
+{
+  "port": "env(PORT)",
+  "settings": {
+    "disk": {
+      "local": {
+        "directory": "assets"
+      }
+    },
+    "loggerFormat": "tiny",
+    "session": {
+      "expirationTimeouts": {
+        "absolute": 2592000,
+        "inactivity": 1800
+      },
+      "store": "@foal/typeorm"
+   
+    }
+  },
+  "database": {
+    "type": "mysql",
+    "host": "env(DB_HOST)",
+    "port": "env(DB_PORT)",
+    "username": "env(DB_USERNAME)",
+    "password": "env(DB_PASSWORD)",
+    "database": "env(DB_NAME)"
+  }
+}
